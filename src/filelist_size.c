@@ -3,8 +3,7 @@
 #include<sys/stat.h>
 #include<string.h>
 #include<stdbool.h>
-
-long long full_size(const char *path);
+#include "engine.h"
 
 int list_files(const char *path)
 {
@@ -74,10 +73,4 @@ long long full_size(const char *path){
     }
     closedir(directory);
     return total_length;
-}
-
-
-int main(){
-    list_files(".");
-    return 0;
 }
